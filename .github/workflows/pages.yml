@@ -1,6 +1,8 @@
-# Explicitly run this workflow after enabling GitHub Pages with GitHub Actions.
+# Publish main automatically; workflow_dispatch also supports manual redeploys.
 name: Publish to GitHub Pages
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

@@ -4,6 +4,8 @@
 
 **A little learning. A little care. A home to grow into.**
 
+**[Play in your browser](https://carlos-aws.github.io/little-nook/)**
+
 A cozy Godot game about sharing small moments with Pip, a woodland bear.
 Count a few apples, read a little story, discover something about nature,
 then tuck everything back into its happy little home.
@@ -185,7 +187,7 @@ assets/audio/            Synthesized WAV effects
 tests/                   Content, rules, persistence regression tests
 tools/                   Art generation, checks, export, browser tooling
 docs/                    Screenshots, design, and Pixel Pals analysis
-.github/workflows/       Checks/build artifacts and manual Pages publishing
+.github/workflows/       Checks/build artifacts and automatic Pages publishing
 ```
 
 See [the setup analysis](docs/pixel-pals-analysis.md) for the original game's
@@ -196,12 +198,14 @@ architecture and [the design notes](docs/design.md) for this game's direction.
 Source: [carlos-aws/little-nook](https://github.com/carlos-aws/little-nook).
 
 CI checks and exports both targets on pushes and pull requests.
-The manual **Publish to GitHub Pages** workflow publishes the Web build after
-you enable **Settings → Pages → Source: GitHub Actions**.
+The **Publish to GitHub Pages** workflow deploys the Web build whenever `main`
+is updated. It can also be run manually from Actions to redeploy.
+
+Live game: [carlos-aws.github.io/little-nook](https://carlos-aws.github.io/little-nook/).
+Pages uses **GitHub Actions** as its publishing source.
 
 Download browser and Linux builds from a successful run's artifacts in
-**Actions → Check and build**. The game itself works independently of GitHub,
-and no Pages deployment runs automatically on a push.
+**Actions → Check and build**. The game itself works independently of GitHub.
 
 ## License
 
